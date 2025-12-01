@@ -1,0 +1,1076 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>eDNA - In-situ data</title>
+<meta name="description" content="environmental DNA (eDNA) analysis of soil biological properties is becoming more and more beneficial for understaning soil health. The combined decrease of analysis costs and increase of reference data rapidy advance the information that can be retrieved from soil eDNA analysis.">
+
+
+  <meta name="author" content="Thomas Gumbricht">
+  
+  <meta property="article:author" content="Thomas Gumbricht">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="In-situ data">
+<meta property="og:title" content="eDNA">
+<meta property="og:url" content="http://localhost:4000/docs/in-situ_methods/edna/">
+
+
+  <meta property="og:description" content="environmental DNA (eDNA) analysis of soil biological properties is becoming more and more beneficial for understaning soil health. The combined decrease of analysis costs and increase of reference data rapidy advance the information that can be retrieved from soil eDNA analysis.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-11-27T05:13:03+01:00">
+
+
+
+  <meta property="article:modified_time" content="2025-11-27T05:13:03+01:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/docs/in-situ_methods/edna/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/docs/feed.xml" type="application/atom+xml" rel="alternate" title="In-situ data Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/docs/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/docs/"><img src="/docs/assets/media/ai4soilhealth_4f.png" alt="In-situ data"></a>
+        
+        <a class="site-title" href="/docs/">
+          In-situ data
+          <span class="site-subtitle"></span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="https://ai4soilhealth.eu"
+                 title="AI4SoilHealth main site"
+                
+              >AI4SH</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/docs/"
+                 title="AI4SH in-situ data main page"
+                
+              >In-situ data:</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/docs/jekyll/jekyll-posts/"
+                 title="In-situ data management - Python package for organising AI4Sh raw data"
+                
+              >management</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/docs/jekyll/jekyll-pages/"
+                 title="AI4SH in-situ data access"
+                
+              >access</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/docs/github/"
+                 title="In-situ data modelling - Pyhton package for Ai modelling with AI4SH in-situ data"
+                
+              >modelling</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">In-situ methods</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/in-situ_methods/aggregates/">Aggregates</a></li>
+            
+              <li><a href="/docs/in-situ_methods/bulkdensity/">Bulk density</a></li>
+            
+              <li><a href="/docs/in-situ_methods/edna/" class="active">eDNA</a></li>
+            
+              <li><a href="/docs/in-situ_methods/digitsoil/">Enzymatic activity</a></li>
+            
+              <li><a href="/docs/in-situ_methods/infiltration/">Infiltration</a></li>
+            
+              <li><a href="/docs/in-situ_methods/ise/">ISE</a></li>
+            
+              <li><a href="/docs/in-situ_methods/microbiometer/">Microbiometer</a></li>
+            
+              <li><a href="/docs/in-situ_methods/penetrometer/">Penetrometer</a></li>
+            
+              <li><a href="/docs/in-situ_methods/salinity/">Salinity</a></li>
+            
+              <li><a href="/docs/in-situ_methods/spectroscopy/">Spectroscopy</a></li>
+            
+              <li><a href="/docs/in-situ_methods/wetlab/">Wet laboratory</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="eDNA">
+    <meta itemprop="description" content="environmental DNA (eDNA) analysis of soil biological properties is becoming more and more beneficial for understaning soil health. The combined decrease of analysis costs and increase of reference data rapidy advance the information that can be retrieved from soil eDNA analysis.">
+    <meta itemprop="datePublished" content="2025-11-27T05:13:03+01:00">
+    <meta itemprop="dateModified" content="2025-11-27T05:13:03+01:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/docs/in-situ_methods/edna/" itemprop="url">eDNA
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>environmental DNA (eDNA) analysis is a complex laboratory bound chain of processes called metabarcoding. Also the sampling in the field requires special equipment and the sample has to be preserved with a shielding liquid preserving the DNA during storage and transport. The raw eDNA result is a dataset of nucleotid sequences, that is then compared to database libraries (bioinformatic treatment) for determining both the organisms (or orgamism groups) and the processes that occur in the soil.</p>
+
+<p>With growing DNA sequence libraries and reduced costs for the metabarcoding, progressively more and more information can be obtained from eDNA analysis. eDNA metabarcoding is thus increasingly becoming an important method for soil health characterisation.</p>
+
+<h2 id="short-method-description">Short method description</h2>
+
+<p>The field sampling requires care to avoid DNA contamination from e.g. human DNA. Once extracted only a very samll sample (milligram) is required. The sample must be preserved to prevent any deterioration or metabolic changes in the DNA nuceoltides and that requires a DNA sheild to be added to the sample. Once the DNA shield is added, the sample can be stored and transported.</p>
+
+<p>The pipeline of processes that compose eDNA metabarcoding in the laboratry include:</p>
+<ul>
+  <li>extraction,</li>
+  <li>amplification,</li>
+  <li>purification,</li>
+  <li>sequencing, and</li>
+  <li>bioinformatic treatment (database library mining).</li>
+</ul>
+
+<p>The eDNA analysed as part of AI4SH focused on three taxonomic domains:</p>
+<ul>
+  <li>Bacteria,</li>
+  <li>Archaea, and</li>
+  <li>Eukarya.</li>
+</ul>
+
+<p>For the Eukarya the analyses were restricted to fungi.</p>
+
+<p>For each group the richness (total number of species - recorded as <em>alpha</em> and <em>chao1</em> indexes), diversity (recorded as alpha <em>Shannon</em> and alpha <em>Simpson</em> indexes) and evenness (<em>pielo</em> index) are recorded. Group related soil functions included for example chemoheterotrophy, human pathogens, plant pathogens and nitrogen fixation. Table 1 is a complete list of eDNA derived eDNA derived organism groups and functions.</p>
+
+<p>Table 1. eDNA derived organism groups and functions recorded with each observation with the applied metabarcoding pipelines.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Indicator</th>
+      <th style="text-align: left">AI4SH extended naming</th>
+      <th style="text-align: left">Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Prokaryotes alpha observed richness</td>
+      <td style="text-align: left">Prokaryotes alpha richness</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-alpha-observed-richness</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes alpha chao1 estimated richness</td>
+      <td style="text-align: left">Prokaryotes chao1 richness</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-alpha-chao1-estimated-richness</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes alpha dominance</td>
+      <td style="text-align: left">Prokaryotes alpha dominance</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-alpha-dominance</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes alpha pielou e</td>
+      <td style="text-align: left">Prokaryotes Pielou evenness</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-alpha-pielou-e</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes alpha shannon</td>
+      <td style="text-align: left">Prokaryotes alpha Shannon diversity</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-alpha-shannon</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes alpha shannon</td>
+      <td style="text-align: left">Prokaryotes alpha Simpson diversity</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-alpha-simpson</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes functional prediction chemoheterotrophy</td>
+      <td style="text-align: left">Prokaryotes chemoheterotrophy</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-functional-prediction-chemoheterotrophy</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes functional prediction human pathogens all</td>
+      <td style="text-align: left">Prokaryotes human pathogens</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-functional-prediction-human-pathogens-all</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Prokaryotes functional prediction nitrogen fixation</td>
+      <td style="text-align: left">Nitrogen fixation</td>
+      <td style="text-align: left">metabarcoding_Prokaryotes-functional-prediction-nitrogen-fixation</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi alpha observed richness</td>
+      <td style="text-align: left">Fungi alpha richness</td>
+      <td style="text-align: left">metabarcoding_Fungi-alpha-observed-richness</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi alpha chao1 estimated richness</td>
+      <td style="text-align: left">Fungi chao1 richness</td>
+      <td style="text-align: left">metabarcoding_Fungi-alpha-chao1-estimated-richness</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi alpha dominance</td>
+      <td style="text-align: left">Fungi alpha dominance</td>
+      <td style="text-align: left">metabarcoding_Fungi-alpha-dominance</td>
+      <td style="text-align: left">uitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi alpha pielou e</td>
+      <td style="text-align: left">Fungi Pielou evenness</td>
+      <td style="text-align: left">metabarcoding_Fungi-alpha-pielou-e</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi alpha shannon</td>
+      <td style="text-align: left">Fungi alpha shannon diversity</td>
+      <td style="text-align: left">metabarcoding_Fungi-alpha-shannon</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi alpha simpson</td>
+      <td style="text-align: left">Fungi alpha simpson diversity</td>
+      <td style="text-align: left">metabarcoding_Fungi-alpha-simpson</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi funtional prediction Ectomycorrhizal fungi</td>
+      <td style="text-align: left">Ectomycorrhizal fungi function</td>
+      <td style="text-align: left">metabarcoding_Fungi-funtional-prediction-Ectomycorrhizal-fungi</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi funtional prediction Arbuscular mycorrhizal fungi</td>
+      <td style="text-align: left">Arbuscular mycorrhizal fungi function</td>
+      <td style="text-align: left">metabarcoding_Fungi-funtional-prediction-Arbuscular-mycorrhizal-fungi</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi funtional prediction fungal saprotrophs</td>
+      <td style="text-align: left">Saprotrophic fungi function</td>
+      <td style="text-align: left">metabarcoding_Fungi-funtional-prediction-fungal-saprotrophs</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi funtional prediction fungal plant pathogens</td>
+      <td style="text-align: left">Plant pathogenic fungi function</td>
+      <td style="text-align: left">metabarcoding_Fungi-funtional-prediction-fungal-plant-pathogens</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="data-format">Data format</h2>
+
+<p>The AI4SH observed eDNA derived organism groups and functions data are available in 2 differently formatted json objects, a flat version more suitable for direct accessibility and a nested version intended for users who wants to convert the data to a relational sql database. The flat version does not include any arrays whereas the nested version is structured with nested arrays.</p>
+
+<h3 id="flat-json-object">Flat json object</h3>
+
+<p>Below is an example of a flat json object for eDNA derived organism groups and functions observations. Object keys with a double underscore denote a link to other entries in the database. For example <em>“person__email”</em> is a key for the person responsible, with more detailed contact information in a separate json document. The hashtag comments are not allowed when operating a json file, they are added here for explaining each json object.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data_source": "ai4sh_se-loennstorp", # 'project'+'_'+'country'+'-'+'pilot site'
+  "sampling_log": { # Assembly of samples collected in the same day at a particular pilot site  
+    "name": "se-loennstorp-20240815", # 'country'+'-'+'pilot site'+'-'+'sampling date'
+    "date_stamp": "20240815", # Date when the sample was collected in the field
+    "person__email": "sampling@gmail.com" # Email of person responsible for the sampling
+  },
+  "sample": "se-loennstorp-20240815_55-c_0-20", # 'country'+'-'+'pilot site'+'-'+'sampling date'+'_'+'sample point id'+'_'+'min depth''+'-'+'max depth'
+  "locus": { # Assembly of the point location, setting and depth
+    "position__name": "se-loennstorp_55-c", # 'country'+'-'+'pilot site'+'-'+'sample point id' used for checking internal consistency
+    "point": "55-c", # sample point id
+    "setting": "uniform", # The spatial setting in the landscape (uniform, alley, plantline, edge)
+    "latitude": 55.6671111111111, # Latitude in WGS84
+    "longitude": 13.1156944444444, # Longitude in WGS84
+    "min_depth": 0, # Sample upper limit in cm in soil profile
+    "max_depth": 20 # Sample lower limit in cm in soil profile
+  },
+  "observation": { # Assembly of metadata and data related to the obeservation
+    sample_preparation__name": "mixed-untreated-soil-in-lab", # Explanatory name of soil treatment before observation
+    "person__email": "analysis@gmail.com", # Email of person responsible for the obeservation
+    "subsample": "a", # For registering if physically different soil subsamples were analysed separately, default for a single analysis = a
+    "replicate": 0, # If the analysis was replicated on the same subsample more than once, the first test is always set to 0
+    "n_repeats": 1, # The number of repetitions done by any instrument on a single subsample and as part of a single replicate, with results reported as mean or mean and standard deviation
+    "date_stamp": "20241110", # Date when the analysis was done
+    "logistic": { # Assembly of logistical metadata on the handling of the sample
+      "sample_preservation__name": "dna shield", # Explanatory name of soil preservation
+      "sample_transport__name": "cold", # Explanatory name of soil transportation if sensitive for analysis results
+      "transport_duration_h": 14, # duration of any sensitive transportation in hours
+      "sample_storage__name": "cold",  # Explanatory name of soil storage if sensitive for analysis results
+      "storage_duration_h": 2088, # Storage duration in hours
+      "person__email": "logistic@gmail.com" # Email of person responsible for the logistics
+    },
+    "analysis": { # Assembly of analysis results, procedures and instruments
+      "metabarcoding_Prokaryotes-alpha-observed-richness": { # Soil property reported as AI4SH extended naming (part after underscore = core indicator)
+        "value": 1219.0, # Recorded value (single value or mean of repeated observations)
+        "unit__name": "unitless", # Recorded unit
+        "indicator__name": "metabarcoding_Prokaryotes-alpha-observed-richness", # AI4SH extended name of the soil indicator (part after underscore = core indicator)
+        "procedure": "metabarcoding", # Procedure for the analysis
+        "analysis_method__name": "edna-prokaryotes-alpha-observed-richness", # Name of the method
+        "instrument_brand__name": "edna-prokaryotes-alpha-observed-richness", # Instrument type or brand
+        "instrument_model__name": "metabarcoding-chain",  # Model or version of the instrument
+        "instrument_id": "0" # Any individual instrument id, the default for unknown id is
+      },
+      "metabarcoding_Prokaryotes-alpha-chao1-estimated-richness": {
+        "value": 1247.879,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-alpha-chao1-estimated-richness",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-alpha-chao1-estimated-richness",
+        "instrument_brand__name": "edna-prokaryotes-alpha-chao1-estimated-richness",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-alpha-dominance": {
+        "value": 0.004,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-alpha-dominance",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-alpha-dominance",
+        "instrument_brand__name": "edna-prokaryotes-alpha-dominance",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-alpha-pielou-e": {
+        "value": 0.887,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-alpha-pielou-e",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-alpha-pielou-e",
+        "instrument_brand__name": "edna-prokaryotes-alpha-pielou-e",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-alpha-shannon": {
+        "value": 9.094,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-alpha-shannon",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-alpha-shannon",
+        "instrument_brand__name": "edna-prokaryotes-alpha-shannon",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-alpha-simpson": {
+        "value": 0.996,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-alpha-simpson",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-alpha-simpson",
+        "instrument_brand__name": "edna-prokaryotes-alpha-simpson",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-functional-prediction-chemoheterotrophy": {
+        "value": 0.110063849194,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-functional-prediction-chemoheterotrophy",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-functional-prediction-chemoheterotrophy",
+        "instrument_brand__name": "edna-prokaryotes-functional-prediction-chemoheterotrophy",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-functional-prediction-human-pathogens-all": {
+        "value": 0.000337826424783,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-functional-prediction-human-pathogens-all",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-functional-prediction-human-pathogens-all",
+        "instrument_brand__name": "edna-prokaryotes-functional-prediction-human-pathogens-all",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Prokaryotes-functional-prediction-nitrogen-fixation": {
+        "value": 0.0,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Prokaryotes-functional-prediction-nitrogen-fixation",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-prokaryotes-functional-prediction-nitrogen-fixation",
+        "instrument_brand__name": "edna-prokaryotes-functional-prediction-nitrogen-fixation",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-alpha-observed-richness": {
+        "value": 537.0,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-alpha-observed-richness",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-alpha-observed-richness",
+        "instrument_brand__name": "edna-fungi-alpha-observed-richness",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-alpha-chao1-estimated-richness": {
+        "value": 543.6,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-alpha-chao1-estimated-richness",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-alpha-chao1-estimated-richness",
+        "instrument_brand__name": "edna-fungi-alpha-chao1-estimated-richness",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-alpha-dominance": {
+        "value": 0.044,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-alpha-dominance",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-alpha-dominance",
+        "instrument_brand__name": "edna-fungi-alpha-dominance",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-alpha-pielou-e": {
+        "value": 0.671,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-alpha-pielou-e",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-alpha-pielou-e",
+        "instrument_brand__name": "edna-fungi-alpha-pielou-e",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-alpha-shannon": {
+        "value": 6.082,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-alpha-shannon",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-alpha-shannon",
+        "instrument_brand__name": "edna-fungi-alpha-shannon",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-alpha-simpson": {
+        "value": 0.956,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-alpha-simpson",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-alpha-simpson",
+        "instrument_brand__name": "edna-fungi-alpha-simpson",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-funtional-prediction-Ectomycorrhizal-fungi": {
+        "value": 0.00284074439098,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-funtional-prediction-Ectomycorrhizal-fungi",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-funtional-prediction-ectomycorrhizal-fungi",
+        "instrument_brand__name": "edna-fungi-funtional-prediction-ectomycorrhizal-fungi",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-funtional-prediction-Arbuscular-mycorrhizal-fungi": {
+        "value": 0.000135273542428,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-funtional-prediction-Arbuscular-mycorrhizal-fungi",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-funtional-prediction-arbuscular-mycorrhizal-fungi",
+        "instrument_brand__name": "edna-fungi-funtional-prediction-arbuscular-mycorrhizal-fungi",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-funtional-prediction-fungal-saprotrophs": {
+        "value": 0.381471389645888,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-funtional-prediction-fungal-saprotrophs",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-funtional-prediction-fungal-saprotrophs",
+        "instrument_brand__name": "edna-fungi-funtional-prediction-fungal-saprotrophs",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      },
+      "metabarcoding_Fungi-funtional-prediction-fungal-plant-pathogens": {
+        "value": 0.395404564515375,
+        "unit__name": "unitless",
+        "indicator__name": "metabarcoding_Fungi-funtional-prediction-fungal-plant-pathogens",
+        "procedure": "metabarcoding",
+        "analysis_method__name": "edna-fungi-funtional-prediction-fungal-plant-pathogens",
+        "instrument_brand__name": "edna-fungi-funtional-prediction-fungal-plant-pathogens",
+        "instrument_model__name": "metabarcoding-chain",
+        "instrument_id": "0"
+      }
+    }
+  }
+}
+</code></pre></div></div>
+
+<h3 id="nested-json-object">Nested json object</h3>
+
+<p>The nested json object for the eDNA derived organism groups and functions observations contains the same object keys and values as the flat version, but hierarcically organised with nested arrays. For explanations of the object keys please see the flat json object above.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data_source": [
+    {
+      "name": "ai4sh_se-loennstorp",
+      "site": [
+        {
+          "name": "se-loennstorp",
+          "point": [
+            {
+              "name": "55-c",
+              "latitude": 55.6671111111111,
+              "longitude": 13.1156944444444,
+              "setting": "uniform",
+              "sampling_log": [
+                {
+                  "name": "se-loennstorp-20240815",
+                  "date_stamp": "20240815",
+                  "person__email": "sampling@gmail.com",
+                  "sample": [
+                    {
+                      "name": "se-loennstorp-20240815_55-c_0-20",
+                      "min_depth": 0,
+                      "max_depth": 20,
+                      "observation": [
+                        {
+                          "sample_preparation__name": "mixed-untreated-soil-in-lab",
+                          "person__email": "analysis@gmail.com",
+                          "subsample": "a",
+                          "replicate": 0,
+                          "n_repeats": 1,
+                          "date_stamp": "20241110",
+                          "logistic": {
+                            "sample_preservation__name": "dna shield",
+                            "sample_transport__name": "cold",
+                            "transport_duration_h": 14,
+                            "sample_storage__name": "cold",
+                            "storage_duration_h": 2088,
+                            "person__email": "logistic@gmail.com"
+                          },
+                          "analysis_method": {
+                            "metabarcoding": [
+                              {
+                                "edna": [
+                                  {
+                                    "value": 1219.0,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-alpha-observed-richness",
+                                    "analysis_method__name": "edna-prokaryotes-alpha-observed-richness",
+                                    "instrument_brand__name": "edna-prokaryotes-alpha-observed-richness",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 1247.879,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-alpha-chao1-estimated-richness",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-alpha-chao1-estimated-richness",
+                                    "instrument_brand__name": "edna-prokaryotes-alpha-chao1-estimated-richness",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.004,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-alpha-dominance",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-alpha-dominance",
+                                    "instrument_brand__name": "edna-prokaryotes-alpha-dominance",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.887,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-alpha-pielou-e",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-alpha-pielou-e",
+                                    "instrument_brand__name": "edna-prokaryotes-alpha-pielou-e",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 9.094,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-alpha-shannon",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-alpha-shannon",
+                                    "instrument_brand__name": "edna-prokaryotes-alpha-shannon",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.996,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-alpha-simpson",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-alpha-simpson",
+                                    "instrument_brand__name": "edna-prokaryotes-alpha-simpson",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.110063849194,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-functional-prediction-chemoheterotrophy",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-functional-prediction-chemoheterotrophy",
+                                    "instrument_brand__name": "edna-prokaryotes-functional-prediction-chemoheterotrophy",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.000337826424783,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-functional-prediction-human-pathogens-all",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-functional-prediction-human-pathogens-all",
+                                    "instrument_brand__name": "edna-prokaryotes-functional-prediction-human-pathogens-all",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.0,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Prokaryotes-functional-prediction-nitrogen-fixation",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-prokaryotes-functional-prediction-nitrogen-fixation",
+                                    "instrument_brand__name": "edna-prokaryotes-functional-prediction-nitrogen-fixation",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 537.0,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-alpha-observed-richness",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-alpha-observed-richness",
+                                    "instrument_brand__name": "edna-fungi-alpha-observed-richness",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 543.6,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-alpha-chao1-estimated-richness",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-alpha-chao1-estimated-richness",
+                                    "instrument_brand__name": "edna-fungi-alpha-chao1-estimated-richness",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.044,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-alpha-dominance",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-alpha-dominance",
+                                    "instrument_brand__name": "edna-fungi-alpha-dominance",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.671,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-alpha-pielou-e",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-alpha-pielou-e",
+                                    "instrument_brand__name": "edna-fungi-alpha-pielou-e",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 6.082,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-alpha-shannon",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-alpha-shannon",
+                                    "instrument_brand__name": "edna-fungi-alpha-shannon",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.956,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-alpha-simpson",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-alpha-simpson",
+                                    "instrument_brand__name": "edna-fungi-alpha-simpson",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.00284074439098,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-funtional-prediction-Ectomycorrhizal-fungi",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-funtional-prediction-ectomycorrhizal-fungi",
+                                    "instrument_brand__name": "edna-fungi-funtional-prediction-ectomycorrhizal-fungi",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.000135273542428,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-funtional-prediction-Arbuscular-mycorrhizal-fungi",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-funtional-prediction-arbuscular-mycorrhizal-fungi",
+                                    "instrument_brand__name": "edna-fungi-funtional-prediction-arbuscular-mycorrhizal-fungi",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.381471389645888,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-funtional-prediction-fungal-saprotrophs",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-funtional-prediction-fungal-saprotrophs",
+                                    "instrument_brand__name": "edna-fungi-funtional-prediction-fungal-saprotrophs",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  },
+                                  {
+                                    "value": 0.395404564515375,
+                                    "unit__name": "unitless",
+                                    "indicator__name": "metabarcoding_Fungi-funtional-prediction-fungal-plant-pathogens",
+                                    "procedure": "metabarcoding",
+                                    "analysis_method__name": "edna-fungi-funtional-prediction-fungal-plant-pathogens",
+                                    "instrument_brand__name": "edna-fungi-funtional-prediction-fungal-plant-pathogens",
+                                    "instrument_model__name": "metabarcoding-chain",
+                                    "instrument_id": "0"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre></div></div>
+
+<h2 id="data-access-and-file-naming">Data access and file naming</h2>
+
+<p>Recorded data from the eDNA metabarcoding analysis are available at:</p>
+
+<ul>
+  <li>Flat json format <a href="https://github.com/AI4SH/in-situ_data/tree/main/flat/edna">https://github.com/AI4SH/in-situ_data/tree/main/flat/edna</a></li>
+  <li>Nested json format: <a href="https://github.com/AI4SH/in-situ_data/tree/main/nested/edna">https://github.com/AI4SH/in-situ_data/tree/main/nested/edna</a></li>
+</ul>
+
+<p>The file naming is defined to separate alll eventual renewed sampling or analysis efforts and is built up from the following metadata:</p>
+<ul>
+  <li>country</li>
+  <li>pilot site</li>
+  <li>sampling date</li>
+  <li>point id</li>
+  <li>min depth</li>
+  <li>max depth</li>
+  <li>subsample</li>
+  <li>replicate</li>
+  <li>setting</li>
+  <li>sample_preservation</li>
+  <li>procedure</li>
+  <li>instrument</li>
+  <li>analysis date</li>
+</ul>
+
+<p>For the examples above, the file name thus have the following component values:</p>
+
+<ul>
+  <li>se</li>
+  <li>loennstorp</li>
+  <li>20240815</li>
+  <li>55-c</li>
+  <li>0</li>
+  <li>20</li>
+  <li>a</li>
+  <li>0</li>
+  <li>uniform</li>
+  <li>mix-wet</li>
+  <li>metabarcoding-chain</li>
+  <li>0</li>
+  <li>20241110</li>
+</ul>
+
+<p>And the final file name becomes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>se-loennstorp-20240815_55-c_0-20_a_0_uniform_mix-wet_metabarcoding-chain_0_20241110.json
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-11-27">November 27, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/docs/in-situ_methods/digitsoil/" class="pagination--pager" title="Enzymatic activity">Previous</a>
+    
+    
+      <a href="/docs/in-situ_methods/infiltration/" class="pagination--pager" title="Infiltration">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/karttur-v2/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/thomas-gumbricht-588a2a23" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=v9-kWvcAAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-google-scholar" aria-hidden="true"></i> Google scholar</a></li>
+        
+      
+        
+          <li><a href="https://orcid.org/0000-0002-5125-4487" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i> Orcid</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/docs/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2013 - 2025 <a href="http://localhost:4000">In-situ data</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/docs/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/docs/assets/js/lunr/lunr.min.js"></script>
+<script src="/docs/assets/js/lunr/lunr-store.js"></script>
+<script src="/docs/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
