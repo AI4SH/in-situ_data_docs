@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/docs/sitemap.xml
+Sitemap: https://ai4sh.github.io/in-situ_data_docs/docs/sitemap.xml
