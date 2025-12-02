@@ -250,30 +250,231 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="short-method-description">Short method description</h2>
+        <p>The ionic composition, together with water, to a large extent defines the non-biological living conditions in a soil ecosystem. Key ions include hydrogen (H<sup>+</sup>, usually expressed as pH), sodium (Na<sup>+</sup>), chloride (Cl<sup>-</sup>), potassium (K<sup>+</sup>), calcium (Ca<sup>2+</sup>), magnesium (Mg<sup>2+</sup>) and different nitrogen species like nitrate (NO<sub>3</sub><sup>-</sup>) and ammonium (NH<sub>4</sub><sup>+</sup>). These ions can all be determined using designated Ion Selective Electrodes (ISEs). ISEs measure the activity of specific ions, usually in a solution, by converting the electrical potential across a membrane that is only permeable to a specific ion. The concentration difference between a reference solution inside the ISE and the concentration in the solution causes a potential that is null (0) when the concentration across the membrane is equal. The larger the concentration difference the larger the absolute value of the potential. An ISE measures this potential, and from 2 or more solutions with known concentrations of the target ion, can be used to estimate the concentration of a particular ion in a solution with unknown concentrations of this particular ion.</p>
 
-<p>Two or more electrodes are inserted into the soil to a specific depth.
-A voltage is applied across the electrodes.
-The resistance or conductivity of the soil to the current is measured.
-This measurement of electrical conductivity (EC) is used to estimate the total dissolved salts, which is a measure of soil salinity.</p>
+<h2 id="short-method-description">Short method description</h2>
 
-<h2 id="scientific-reports">Scientific reports</h2>
+<p>ISEs are sensitive instruments and require carefulness when handled and calibrated. The most widely used ISE type is for measuring pH, and pH electrodes are also cheaper and more stable compared to other ISEs. In AI4SH, pH ISEs for both direct observation in the field, and for soil diluted in distilled water (at a ratio 1:5) were tested (table 1).</p>
 
-<h2 id="data-access">Data access</h2>
+<p>Table 1. pH recorded Ion Selective Electrode (ISE) observations.</p>
 
-<h2 id="resources">Resources</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Indicator</th>
+      <th style="text-align: left">AI4SH extended naming</th>
+      <th style="text-align: left">Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Hydrogen ion concentration</td>
+      <td style="text-align: left">pH(soil)</td>
+      <td style="text-align: left">xspectre-ise-ph-solid_ph(soil)</td>
+      <td style="text-align: left">pH</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hydrogen ion concentration</td>
+      <td style="text-align: left">pH(water)</td>
+      <td style="text-align: left">xspectre-ise-ph-liquid_ph(water)</td>
+      <td style="text-align: left">pH</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><a href="https://brew.sh">Howebrew</a></p>
+<p>The ISE for direct observation in the field has a more robust tip that can be inserted directly into soft soils, or after pricking a small hole with a pencil or similarly tipped tool in more sturdy soils. It is despite this a sensitive and breakable tool and was only tested at a single pilot site. Ordinary ISEs are built for sampling solutions, and was tested at several pilot sites as part of the AI4SH in-situ sampling. Following the standard procedure when measuring pH, the AI4SH solution applied method diluted soil samples in distilled water at a ratio 1:5 and then measured the pH with a standard pH ISE. For calibration, pH buffers of pH=4.01 and pH=10.01 were used. The microcontroller unit for running and recording the pH ISE observations in AI4SH is constructed by the Swedish startup <a href="https://www.xspectre.com">Xspectre</a>.</p>
 
-<p><a href="https://rvm.io">RVM</a></p>
+<h2 id="data-format">Data format</h2>
 
-<p><a href="https://asdf-vm.com">Asdf</a></p>
+<p>Each pH ISE measurement, both in soil and soil:water solutions, is based on 6 replications and the recorded data report the mean value and the standard deviation. The observed pH data are available in 2 differently formatted json objects, a flat version more suitable for direct accessibility and a nested version intended for users who wants to convert the data to a relational sql database. The flat version does not include any arrays whereas the nested version is structured with nested arrays.</p>
 
-<p><a href="https://github.com/postmodern/chruby">chruby</a></p>
+<h3 id="flat-json-object">Flat json object</h3>
 
-<p><a href="https://github.com/TaKO8Ki/frum">Frum</a></p>
+<p>Below is an example of a flat json object for pH observation. Object keys with a double underscore denote a link to other entries in the database. For example <em>“person__email”</em> is a key for the person responsible, with more detailed contact information in a separate json document. The hashtag comments are not allowed when operating a json file, they are added here for explaining each json object.</p>
 
-<p><a href="https://mac.install.guide/ruby/">blog on installing Ruby on MacOS</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "campaign": "ai4sh_fi-jokioinen", # 'project'+'_'+'country'+'-'+'pilot site'
+  "sampling_log": { # Assembly of samples collected in the same day at a particular pilot site
+    "name": "fi-jokioinen-20241008", # 'country'+'-'+'pilot site'+'-'+'sampling date'
+    "date_stamp": "20241008", # Date when the sample was collected in the field
+    "person__email": "thomasg@xspectre.com" # Email of person responsible for the sampling
+  },
+  "sample": "fi-jokioinen-20241008_7-r_0-20", # 'country'+'-'+'pilot site'+'-'+'sampling date'+'_'+'sample point id'+'_'+'min depth''+'-'+'max depth'
+  "locus": { # Assembly of the point location, setting and depth
+    "position__name": "fi-jokioinen_7-r", # 'country'+'-'+'pilot site'+'-'+'sample point id' used for checking internal consistency
+    "point": "7-r", # sample point id
+    "setting": "uniform", # The spatial setting in the landscape (uniform, alley, plantline, edge)
+    "latitude": 60.817951078, # Latitude in WGS84
+    "longitude": 23.493872667, # Longitude in WGS84
+    "min_depth": 0, # Sample upper limit in cm in soil profile
+    "max_depth": 20 # Sample lower limit in cm in soil profile
+  },
+  "observation": { # Assembly of metadata and data related to the observation
+    "sample_preparation__name": "soil-undisturbed-in-situ", # Explanatory name of soil treatment before observation
+    "person__email": "thomasg@xspectre.com", # Email of person responsible for the observation
+    "subsample": "a", # For registering if physically different soil subsamples were analysed separately, default for a single analysis = a
+    "replicate": 0, # If the analysis was replicated on the same subsample more than once, the first test is always set to 0
+    "n_repeats": 6, # The number of repetitions done by any instrument on a single subsample and as part of a single replicate, with results reported as mean or mean and standard deviation
+    "date_stamp": "20241011", # Date when the analysis was done
+    "logistic": { # Assembly of logistical metadata on the handling of the sample
+      "sample_preservation__name": null, # Explanatory name of soil preservation
+      "sample_transport__name": null, # Explanatory name of soil transportation if sensitive for analysis results
+      "transport_duration_h": 0, # duration of any sensitive transportation in hours
+      "sample_storage__name": null, # Explanatory name of soil storage if sensitive for analysis results
+      "storage_duration_h": 72,
+      "person__email": "thomasg@xspectre.com" # Email of person responsible for the logistics
+    },
+    "analysis": {  # Assembly of analysis results, procedures and instruments
+      "xspectre-ise-ph-solid_ph(soil)": {  # Soil property reported as AI4SH extended naming (part after underscore = core indicator)
+        "value": 6.810666666666665, # Recorded value (single value or mean of repeated observations)
+        "standard_deviation": 0.05562573345334154, # Recorded standard deviation of repeated measurements
+        "unit__name": "pH", # Recorded unit
+        "indicator__name": "xspectre-ise-ph-solid_ph(soil)", # AI4SH extended name of the soil indicator (part after underscore = core indicator)
+        "procedure": "xspectre-ise-ph-solid", # Procedure for the analysis
+        "analysis_method__name": "ise-ph-soil", # Name of the method
+        "instrument_brand__name": "soil-ise-ph", # Instrument type or brand
+        "instrument_model__name": "ise-ph-soil", # Model or version of the instrument
+        "instrument_id": "0"  # Any individual instrument id, the default for unknown id is "0"
+      }
+    }
+  }
+}
+</code></pre></div></div>
+
+<h3 id="nested-json-object">Nested json object</h3>
+
+<p>The nested json object pH ISE observations contains the same object keys and values as the flat version, but hierarcically organised with nested arrays. For explanations of the object keys please see the flat json object above.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "data_source": [
+    {
+      "name": "ai4sh_fi-jokioinen",
+      "site": [
+        {
+          "name": "fi-jokioinen",
+          "point": [
+            {
+              "name": "7-r",
+              "latitude": 60.817951078,
+              "longitude": 23.493872667,
+              "setting": "uniform",
+              "sampling_log": [
+                {
+                  "name": "fi-jokioinen-20241008",
+                  "date_stamp": "20241008",
+                  "person__email": "thomasg@xspectre.com",
+                  "sample": [
+                    {
+                      "name": "fi-jokioinen-20241008_7-r_0-20",
+                      "min_depth": 0,
+                      "max_depth": 20,
+                      "observation": [
+                        {
+                          "sample_preparation__name": "soil-undisturbed-in-situ",
+                          "person__email": "thomasg@xspectre.com",
+                          "subsample": "a",
+                          "replicate": 0,
+                          "n_repeats": 6,
+                          "date_stamp": "20241011",
+                          "logistic": {
+                            "sample_preservation__name": null,
+                            "sample_transport__name": null,
+                            "transport_duration_h": 0,
+                            "sample_storage__name": null,
+                            "storage_duration_h": 72,
+                            "person__email": "thomasg@xspectre.com"
+                          },
+                          "analysis_method": {
+                            "xspectre-ise-ph-solid": [
+                              {
+                                "value": 6.810666666666665,
+                                "standard_deviation": 0.05562573345334154,
+                                "unit__name": "pH",
+                                "indicator__name": "xspectre-ise-ph-solid_ph(soil)",
+                                "analysis_method__name": "ise-ph-soil",
+                                "instrument_brand__name": "soil-ise-ph",
+                                "instrument_model__name": "ise-ph-soil",
+                                "instrument_id": "0"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre></div></div>
+
+<h2 id="data-access-and-file-naming">Data access and file naming</h2>
+
+<p>The data is provided under the following licenses:</p>
+
+<ul>
+  <li>Data License: Creative Commons Attribution license (<strong>CC-BY</strong>)</li>
+  <li>Code License: Massachusetts Institute of Technology License ()<strong>MIT License</strong>)</li>
+</ul>
+
+<p>Recorded data from the pH ISE analysis are available at:</p>
+
+<ul>
+  <li>Flat json format <a href="https://github.com/AI4SH/in-situ_data/tree/main/flat/ise-ph">https://github.com/AI4SH/in-situ_data/tree/main/flat/ise-ph</a></li>
+  <li>Nested json format: <a href="https://github.com/AI4SH/in-situ_data/tree/main/nested/ise-ph">https://github.com/AI4SH/in-situ_data/tree/main/nested/ise-ph</a></li>
+</ul>
+
+<p>The file naming is defined to separate alll eventual renewed sampling or analysis efforts and is built up from the following metadata:</p>
+<ul>
+  <li>country</li>
+  <li>pilot site</li>
+  <li>sampling date</li>
+  <li>point id</li>
+  <li>min depth</li>
+  <li>max depth</li>
+  <li>subsample</li>
+  <li>replicate</li>
+  <li>setting</li>
+  <li>sample_preservation</li>
+  <li>procedure</li>
+  <li>instrument</li>
+  <li>analysis date</li>
+</ul>
+
+<p>For the examples above, the file name thus have the following component values:</p>
+
+<ul>
+  <li>fi</li>
+  <li>jokioinen</li>
+  <li>20241008</li>
+  <li>7-r</li>
+  <li>0</li>
+  <li>20</li>
+  <li>a</li>
+  <li>0</li>
+  <li>uniform</li>
+  <li>no-prep</li>
+  <li>ise-ph-soil</li>
+  <li>0</li>
+  <li>20241011</li>
+</ul>
+
+<p>And the final file name becomes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fi-jokioinen-20241008_7-r_0-20_a_0_uniform_no-prep_ise-ph-soil_0_20241011.json
+</code></pre></div></div>
+
+<h2 id="acknowledgments-and-funding">Acknowledgments and Funding</h2>
+
+<p>This work is part of the AI4SoilHealth project, funded by the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101086179.</p>
+
+<p><em>Funded by the European Union. The views expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Executive Agency.</em></p>
 
 
         

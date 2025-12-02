@@ -250,13 +250,42 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Aggregates, clumps of smaller soil particles glued together by biological processes, are key components for e.g. soil hydraulic properties, nutrient recycling and pool sizes. Stable soil aggregates also contribute to resistance towards wind and water erosion, and are linked to improved water capture, infiltration, and storage.</p>
+        <p>Aggregates, clumps of smaller soil particles glued together by biological processes, are key components for e.g. soil hydraulic properties, nutrient recycling and pool sizes. Stable soil aggregates also contribute to resistance towards wind and water erosion, and are linked to improved water capture, infiltration and storage.</p>
 
-<p>The smartphone apps <a href="https://soilhealthinstitute.org/our-work/initiatives/slakes/">Slakes</a> and Moulder (a renamed version of Slakes) uses image analysis of dried, pea sized soil aggregates before and after soaking. Aggregates that resist dispersion after rewetting and <em>slake</em> (or <em>mould</em>, i.e. disintegrate) less are more stable compared to those that break apart. A higher resistance indicate a healthier soil.</p>
+<p>The smartphone apps <a href="https://soilhealthinstitute.org/our-work/initiatives/slakes/">Slakes</a> and Moulder (a renamed version of Slakes) uses image analysis of dried, pea sized soil aggregates before and after soaking. Aggregates that resist dispersion after rewetting and <em>slake</em> (or <em>mould</em>, i.e. disintegrate) less, are more stable compared to those that break apart. A higher resistance indicate a healthier soil.</p>
+
+<p>Both apps are available on both Apple’s App store and Google play for Android.</p>
 
 <h2 id="short-method-description">Short method description</h2>
 
-<p>From a dired soil sample three pea sized aggregates are selected and put in a shallow dish. A smartphone with the app installed is mounted above the dish and an image taken of the dish and the three aggregates. The dish is then gently filled with water, enough to just cover the aggregates. The user can adjust the app’s identification of the aggregates, and another images is captured. After 10 minutes a third image is taken and the app calculates an aggregate stability index.</p>
+<p>From a dried soil sample three pea sized aggregates are selected and put in a shallow dish. A smartphone with the app installed is mounted above the dish and an image taken of the dish and the three aggregates. The dish is then gently filled with water, enough to just cover the aggregates. The user can adjust the app’s identification of the aggregates, and another images is captured. After 10 minutes a third image is taken and the app calculates an aggregate stability index (table 1).</p>
+
+<p>Table 1. Aggregate stability recorded with each observation with the Slakes/Moulder apps.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Indicator</th>
+      <th style="text-align: left">AI4SH extended naming</th>
+      <th style="text-align: left">Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Aggregate stability</td>
+      <td style="text-align: left">aggregate-stability-index</td>
+      <td style="text-align: left">slakes_aggregate-stability-index</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Aggregate stability</td>
+      <td style="text-align: left">aggregate-stability-index</td>
+      <td style="text-align: left">moulder_aggregate-stability-index</td>
+      <td style="text-align: left">unitless</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="data-format">Data format</h2>
 
@@ -283,9 +312,9 @@
     "min_depth": 0, # Sample upper limit in cm in soil profile
     "max_depth": 20 # Sample lower limit in cm in soil profile
   },
-  "observation": { # Assembly of metadata and data related to the obeservation
+  "observation": { # Assembly of metadata and data related to the observation
     "sample_preparation__name": "dried-aggregate-select+soaked", # Explanatory name of soil treatment before observation
-    "person__email": "analysis@gmail.com", # Email of person responsible for the obeservation
+    "person__email": "analysis@gmail.com", # Email of person responsible for the observation
     "subsample": "a", # For registering if physically different soil subsamples were analysed separately, default for a single analysis = a
     "replicate": 0, # If the analysis was replicated on the same subsample more than once, the first test is always set to 0
     "n_repeats": 1, # The number of repetitions done by any instrument on a single subsample and as part of a single replicate, with results reported as mean or mean and standard deviation
@@ -391,6 +420,13 @@
 
 <h2 id="data-access-and-file-naming">Data access and file naming</h2>
 
+<p>The data is provided under the following licenses:</p>
+
+<ul>
+  <li>Data License: Creative Commons Attribution license (<strong>CC-BY</strong>)</li>
+  <li>Code License: Massachusetts Institute of Technology License ()<strong>MIT License</strong>)</li>
+</ul>
+
 <p>Recorded data from the aggregate stability analysis are available at:</p>
 
 <ul>
@@ -437,6 +473,12 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>se-loennstorp-20240815_55-c_0-20_a_0_uniform_dry-pick-soak_slakes+samsung-a26_0_20241110.json
 </code></pre></div></div>
+
+<h2 id="acknowledgments-and-funding">Acknowledgments and Funding</h2>
+
+<p>This work is part of the AI4SoilHealth project, funded by the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101086179.</p>
+
+<p><em>Funded by the European Union. The views expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Executive Agency.</em></p>
 
 
         

@@ -273,64 +273,64 @@
   <thead>
     <tr>
       <th style="text-align: left">Property</th>
-      <th style="text-align: left">Abbreviation</th>
-      <th style="text-align: left">AI4SH Indicator</th>
+      <th style="text-align: left">Indicator</th>
+      <th style="text-align: left">AI4SH extended naming</th>
       <th style="text-align: left">Unit</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left">temperature</td>
-      <td style="text-align: left">temp</td>
-      <td style="text-align: left">temp</td>
+      <td style="text-align: left">temperature</td>
+      <td style="text-align: left">xspectre-penetrometer_temperature</td>
       <td style="text-align: left">C</td>
     </tr>
     <tr>
       <td style="text-align: left">Soil moisture</td>
-      <td style="text-align: left">sm</td>
-      <td style="text-align: left">sm</td>
+      <td style="text-align: left">soil-moisture-volumetric-content</td>
+      <td style="text-align: left">xspectre-penetrometer_soil-moisture-volumetric-content</td>
       <td style="text-align: left">vol*vol^-1</td>
     </tr>
     <tr>
       <td style="text-align: left">pH</td>
+      <td style="text-align: left">pH(soil)</td>
+      <td style="text-align: left">xspectre-penetrometer_ph(soil)</td>
       <td style="text-align: left">pH</td>
-      <td style="text-align: left">pH</td>
-      <td style="text-align: left">ph</td>
     </tr>
     <tr>
       <td style="text-align: left">Nitrogen</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">n</td>
+      <td style="text-align: left">xspectre-penetrometer_nitrogen</td>
       <td style="text-align: left">mg*l-1</td>
     </tr>
     <tr>
       <td style="text-align: left">Phosphorus</td>
       <td style="text-align: left">P</td>
-      <td style="text-align: left">p</td>
+      <td style="text-align: left">xspectre-penetrometer_phosphorus</td>
       <td style="text-align: left">mg*l-1</td>
     </tr>
     <tr>
       <td style="text-align: left">Potassium</td>
       <td style="text-align: left">K</td>
-      <td style="text-align: left">k</td>
+      <td style="text-align: left">xspectre-penetrometer_potassium</td>
       <td style="text-align: left">mg*l-1</td>
     </tr>
     <tr>
       <td style="text-align: left">Electric conductivity</td>
-      <td style="text-align: left">ec</td>
-      <td style="text-align: left">ec</td>
+      <td style="text-align: left">electrical-conductivity</td>
+      <td style="text-align: left">xspectre-penetrometer_electrical-conductivity</td>
       <td style="text-align: left">us*cm-1</td>
     </tr>
     <tr>
       <td style="text-align: left">Salinity</td>
-      <td style="text-align: left">Sal</td>
-      <td style="text-align: left">sal</td>
+      <td style="text-align: left">salinity</td>
+      <td style="text-align: left">xspectre-penetrometer_salinity</td>
       <td style="text-align: left">mg*l-1</td>
     </tr>
     <tr>
       <td style="text-align: left">Total Dissolved Solid</td>
-      <td style="text-align: left">TDS</td>
-      <td style="text-align: left">tds</td>
+      <td style="text-align: left">total-dissolved-solids</td>
+      <td style="text-align: left">xspectre-penetrometer_total-dissolved-solids</td>
       <td style="text-align: left">mg*l-1</td>
     </tr>
   </tbody>
@@ -338,7 +338,7 @@
 
 <h2 id="data-format">Data format</h2>
 
-<p>Each measurement with the NPKPHCTH-S penetrometer is based on 6 repetions and the recorded data contains the mean value and the standard deviation of these 6 repetitions. The observed penetrometer data are available in 2 differently formatted json objects, a flat version more suitable for direct accessibility and a nested version intended for users who wants to convert the data to a relational sql database. The flat version does not include any arrays whereas the nested version is structured with nested arrays.</p>
+<p>Each measurement with the NPKPHCTH-S penetrometer is based on 6 repetitions and the recorded data contain the mean value and the standard deviation of these 6 repetitions. The observed penetrometer data are available in 2 differently formatted json objects, a flat version more suitable for direct accessibility and a nested version intended for users who wants to convert the data to a relational sql database. The flat version does not include any arrays whereas the nested version is structured with nested arrays.</p>
 
 <h3 id="flat-json-object">Flat json object</h3>
 
@@ -361,9 +361,9 @@
     "min_depth": 0, # Sample upper limit in cm in soil profile
     "max_depth": 20 # Sample lower limit in cm in soil profile
   },
-  "observation": { # Assembly of metadata and data related to the obeservation
+  "observation": { # Assembly of metadata and data related to the observation
     "sample_preparation__name": "mixed-untreated-soil-in-lab", # Explanatory name of soil treatment before observation
-    "person__email": "thomasg@xspectre.com", # Email of person responsible for the obeservation
+    "person__email": "thomasg@xspectre.com", # Email of person responsible for the observation
     "subsample": "b", # For registering if physically different soil subsamples were analysed separately, default for a single analysis = a
     "replicate": 0, # If the analysis was replicated on the same subsample more than once, the first test is always set to 0
     "n_repeats": 6, # The number of repetitions done by any instrument on a single subsample and as part of a single replicate, with results reported as mean or mean and standard deviation
@@ -635,6 +635,13 @@
 
 <h2 id="data-access-and-file-naming">Data access and file naming</h2>
 
+<p>The data is provided under the following licenses:</p>
+
+<ul>
+  <li>Data License: Creative Commons Attribution license (<strong>CC-BY</strong>)</li>
+  <li>Code License: Massachusetts Institute of Technology License ()<strong>MIT License</strong>)</li>
+</ul>
+
 <p>recorded data from the Microbiometer analysis are available at</p>
 
 <ul>
@@ -682,7 +689,13 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fi-jokioinen-20241008_22-r_0-20_b_0_uniform_mix-wet_npkphcth-s_0003_20241008
 </code></pre></div></div>
 
-<p>As noted above, the the peneteromer observations in Jokioinen, Finlad, three copies of the penterometer model (with id’s 0001, 0002 and 0003) where used and each penetroemter where tested on several subsampels (denoted a, b, c, etc).</p>
+<h2 id="acknowledgments-and-funding">Acknowledgments and Funding</h2>
+
+<p>This work is part of the AI4SoilHealth project, funded by the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101086179.</p>
+
+<p><em>Funded by the European Union. The views expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Executive Agency.</em></p>
+
+<p>As noted above, the the peneteromer observations in Jokioinen, Finlad, three copies of the penterometer model (with id’s 0001, 0002 and 0003) where used and each penetrometer where tested on several subsampels (denoted a, b, c, etc).</p>
 
 
         

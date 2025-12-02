@@ -254,7 +254,40 @@
 
 <h2 id="short-method-description">Short method description</h2>
 
-<p>The commercial Microbiometer test mixes a small (1 ml) soil sample with a reagent solution whereafter the mixture is rested for 20 minutes while the reaction is completed and the solution settles. Three drops of the supernatant are extracetd using a provided pipette and applied to a likewise provided test card. The test card is then scanned with a smartphone using the Microbiometer app. If the color change of the drop area on the test card is too weak, additional three drops are added and the test card re-scanned. From the color intensity of the drop area, the app reports the soil’s microbial biomass carbon content and fungal-to-bacterial ratio. The test takes approximately 30 minutes in total. The app and the test card were updated during 2025 and thus the AI4SH reported results relate to both the <em>classic</em> and <em>pro</em> versions of the Microbiometer.</p>
+<p>The commercial Microbiometer test mixes a small (1 ml) soil sample with a reagent solution whereafter the mixture is rested for 20 minutes while the reaction is completed and the solution settles. Three drops of the supernatant are extracted using a provided pipette and applied to a likewise provided test card. The test card is then scanned with a smartphone using the Microbiometer app. If the colour change of the drop area on the test card is too weak, additional three drops are added and the test card re-scanned. From the colour intensity of the drop area, the app reports the soil’s microbial biomass carbon content and fungal-to-bacterial ratio (table 1). The test takes approximately 30 minutes in total. The app and the test card were updated during 2025 and thus the AI4SH reported results relate to both the <em>classic</em> and <em>pro</em> versions of the Microbiometer.</p>
+
+<p>Table 1. Microbiometer recorded observations with each observation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Indicator</th>
+      <th style="text-align: left">AI4SH extended naming</th>
+      <th style="text-align: left">Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Microbial biomass</td>
+      <td style="text-align: left">microbial-C</td>
+      <td style="text-align: left">microbiometer_Microbial-C</td>
+      <td style="text-align: left">ug*g^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fungi fraction</td>
+      <td style="text-align: left">fungi-fraction</td>
+      <td style="text-align: left">microbiometer_fungi-fraction</td>
+      <td style="text-align: left">%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Baceteria fraction</td>
+      <td style="text-align: left">bacteria-fraction</td>
+      <td style="text-align: left">microbiometer_bacteria-fraction</td>
+      <td style="text-align: left">%</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="data-format">Data format</h2>
 
@@ -281,9 +314,9 @@
     "min_depth": 0, # Sample upper limit in cm in soil profile
     "max_depth": 20 # Sample lower limit in cm in soil profile
   },
-  "observation": { # Assembly of metadata and data related to the obeservation
+  "observation": { # Assembly of metadata and data related to the observation
     "sample_preparation__name": "mixed-untreated-soil-in-lab", # Explanatory name of soil treatment before observation
-    "person__email": "analysis@gmail.com", # Email of person responsible for the obeservation
+    "person__email": "analysis@gmail.com", # Email of person responsible for the observation
     "subsample": "a", # For registering if physically different soil subsamples were analysed separately, default for a single analysis = a
     "replicate": 0, # If the analysis was replicated on the same subsample more than once, the first test is always set to 0
     "n_repeats": 1, # The number of repetitions done by any instrument on a single subsample and as part of a single replicate, with results reported as mean or mean and standard deviation
@@ -429,6 +462,13 @@
 
 <h2 id="data-access-and-file-naming">Data access and file naming</h2>
 
+<p>The data is provided under the following licenses:</p>
+
+<ul>
+  <li>Data License: Creative Commons Attribution license (<strong>CC-BY</strong>)</li>
+  <li>Code License: Massachusetts Institute of Technology License ()<strong>MIT License</strong>)</li>
+</ul>
+
 <p>Recorded data from the Microbiometer analysis are available at:</p>
 
 <ul>
@@ -475,6 +515,12 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>se-loennstorp-20240815_55-c_0-20_a_0_uniform_mix-wet_classic_0_20240815.json
 </code></pre></div></div>
+
+<h2 id="acknowledgments-and-funding">Acknowledgments and Funding</h2>
+
+<p>This work is part of the AI4SoilHealth project, funded by the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101086179.</p>
+
+<p><em>Funded by the European Union. The views expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Executive Agency.</em></p>
 
 
         

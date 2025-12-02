@@ -250,36 +250,146 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Traditionally soil properties have been determined by wet laboratory methods.</p>
+        <p>Traditional chemicophysical soil properties have been determined by wet laboratory methods. While traditional methods are restricted to chemical and physical properties, disregarding biological compostions and precesse, they are still the benchmark against which novel physicochemical methods are tested and evaluated. They are also used for interpreting biological methods and their results, also in the light of the machnancial paradigm of agricultural practicies focusing on chemical physical management.</p>
 
 <h2 id="method-description-and-reference">Method description and reference</h2>
 
-<p>15 soil parameters were analysed using traditional wet laboratory methods (table 1). The majority of the samples were analysed at German [Agrolab][agrolab], using the methods listed in table 1.</p>
+<p>For almost all collected sample within the AI4SH in-situ campaign, 15 soil parameters were analysed using traditional wet laboratory methods (table 1). The majority of the samples were analysed at German [Agrolab][agrolab]. The exception is the trial sampling at the Greek pilot site Ktima-Gerovassiliou.</p>
+
+<p>Table 1.</p>
 
 <table>
   <thead>
     <tr>
+      <th style="text-align: left">Property</th>
       <th style="text-align: left">Indicator</th>
-      <th style="text-align: left">abbreviation</th>
-      <th style="text-align: left">unit</th>
-      <th style="text-align: left">Method</th>
-      <th style="text-align: left">ISO</th>
-      <th style="text-align: left">url</th>
+      <th style="text-align: left">AI4SH extended naming</th>
+      <th style="text-align: left">Unit</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left">pH</td>
+      <td style="text-align: left">pH(water)</td>
+      <td style="text-align: left">agrolab_ph(water)</td>
       <td style="text-align: left">pH</td>
-      <td style="text-align: left">ph-h<sub>2</sub>o</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Electrical conductivity</td>
+      <td style="text-align: left">electrical-conductivity</td>
+      <td style="text-align: left">agrolab_electrical-conductivity</td>
+      <td style="text-align: left">us*cm^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Total Organic Carbon</td>
+      <td style="text-align: left">total-organic-carbon</td>
+      <td style="text-align: left">agrolab_total-organic-carbon</td>
+      <td style="text-align: left">percent</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Total Nitrogen</td>
+      <td style="text-align: left">total-nitrogen</td>
+      <td style="text-align: left">agrolab_total-nitrogen</td>
+      <td style="text-align: left">percent</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Calcium</td>
+      <td style="text-align: left">calcium</td>
+      <td style="text-align: left">agrolab_calcium</td>
+      <td style="text-align: left">cmol*kg^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Magnesium</td>
+      <td style="text-align: left">magnesium</td>
+      <td style="text-align: left">agrolab_magnesium</td>
+      <td style="text-align: left">cmol*kg^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Potassium</td>
+      <td style="text-align: left">potassium</td>
+      <td style="text-align: left">agrolab_potassium</td>
+      <td style="text-align: left">cmol*kg^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Sodium</td>
+      <td style="text-align: left">sodium</td>
+      <td style="text-align: left">agrolab_sodium</td>
+      <td style="text-align: left">cmol*kg^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Cation exchange capacity</td>
+      <td style="text-align: left">cation-exchange-capacity</td>
+      <td style="text-align: left">agrolab_cation-exchange-capacity</td>
+      <td style="text-align: left">cmol*kg^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Olsen phosphorus</td>
+      <td style="text-align: left">olsen-phosphorus</td>
+      <td style="text-align: left">agrolab_olsen-phosphorus</td>
+      <td style="text-align: left">mg*100g^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">clay(&lt;0.002mm)</td>
+      <td style="text-align: left">clay(&lt;0.002mm)</td>
+      <td style="text-align: left">agrolab-wet-clay(&lt;0.002mm)</td>
+      <td style="text-align: left">g*100g^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fine-silt(0.002-0.02mm)</td>
+      <td style="text-align: left">fine-silt(0.002-0.02mm)</td>
+      <td style="text-align: left">agrolab_fine-silt(0.002-0.02mm)</td>
+      <td style="text-align: left">g*100g^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">coarse-silt(0.02-0.06mm)</td>
+      <td style="text-align: left">coarse-silt(0.02-0.06mm)</td>
+      <td style="text-align: left">agrolab_coarse-silt(0.02-0.06mm)</td>
+      <td style="text-align: left">g*100g^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fine-sand(0.06-0.2mm)</td>
+      <td style="text-align: left">fine-sand(0.06-0.2mm)</td>
+      <td style="text-align: left">agrolab_fine-sand(0.06-0.2mm)</td>
+      <td style="text-align: left">g*100g^-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">coarse-sand(0.2-2.0mm)</td>
+      <td style="text-align: left">coarse-sand(0.2-2.0mm)</td>
+      <td style="text-align: left">agrolab_coarse-sand(0.2-2.0mm)</td>
+      <td style="text-align: left">g*100g^-1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 2. Detailed methods applied by Agrolab for analysing AI4SH soil sample chemicophysical properties.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">abbreviation</th>
+      <th style="text-align: left">method</th>
+      <th style="text-align: left">ISO</th>
+      <th style="text-align: left">USDA</th>
+      <th style="text-align: left">FAO</th>
+      <th style="text-align: left">url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">pH(water)</td>
+      <td style="text-align: left">pH-h<sub>2</sub>o</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Electric conductivity</td>
+      <td style="text-align: left">Electrical conductivity</td>
       <td style="text-align: left">EC</td>
-      <td style="text-align: left">uS*cm^-1</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
@@ -287,7 +397,8 @@
     <tr>
       <td style="text-align: left">Total Organic Carbon</td>
       <td style="text-align: left">TOC</td>
-      <td style="text-align: left">g*100g^-1</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
@@ -295,39 +406,35 @@
     <tr>
       <td style="text-align: left">Total Nitrogen</td>
       <td style="text-align: left">tot-N</td>
-      <td style="text-align: left">g*100g^-1</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">Calcium</td>
-      <td style="text-align: left">(Ca<sub>2</sub><sup>+</sup>)</td>
-      <td style="text-align: left">cmol*kg^-1</td>
+      <td style="text-align: left">Ca<sup>2+</sup></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">Magnesium</td>
-      <td style="text-align: left">(Mg<sub>2</sub><sup>+</sup>)</td>
-      <td style="text-align: left">cmol*kg^-1</td>
+      <td style="text-align: left">Mg<sup>2+</sup></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">Potassium</td>
-      <td style="text-align: left">(K<sup>+</sup>)</td>
-      <td style="text-align: left">cmol*kg^-1</td>
+      <td style="text-align: left">K<sup>+</sup></td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Sodium</td>
-      <td style="text-align: left">(Na<sup>+</sup>)</td>
-      <td style="text-align: left">cmol*kg^-1</td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
@@ -335,55 +442,62 @@
     <tr>
       <td style="text-align: left">Cation exchange capacity</td>
       <td style="text-align: left">CEC</td>
-      <td style="text-align: left">cmol*kg^-1</td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Phosphorus</td>
-      <td style="text-align: left">P</td>
-      <td style="text-align: left">mg*100g^-1</td>
-      <td style="text-align: left">Olsen-P</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Clay (&lt;0,002 mm)</td>
-      <td style="text-align: left">Clay</td>
-      <td style="text-align: left">g*100g^-1</td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Fine silt (0.002-0.02 mm)</td>
-      <td style="text-align: left">Fine silt</td>
-      <td style="text-align: left">g*100g^-1</td>
+      <td style="text-align: left">Olsen phosphorus</td>
+      <td style="text-align: left">olsen-P</td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Coarse silt (0.02-0.06 mm)</td>
-      <td style="text-align: left">Coarse silt</td>
-      <td style="text-align: left">g*100g^-1</td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Fine sand (0.06-0.2 mm)</td>
-      <td style="text-align: left">Fine sand</td>
-      <td style="text-align: left">g*100g^-1</td>
+      <td style="text-align: left">clay(&lt;0.002mm)</td>
+      <td style="text-align: left">clay</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Coarse sand (0.2-2.0 mm)</td>
-      <td style="text-align: left">Coarse sand</td>
-      <td style="text-align: left">g*100g^-1</td>
+      <td style="text-align: left">fine-silt(0.002-0.02mm)</td>
+      <td style="text-align: left">fine-silt</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">coarse-silt(0.02-0.06mm)</td>
+      <td style="text-align: left">coarse-silt</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fine-sand(0.06-0.2mm)</td>
+      <td style="text-align: left">fine-sand</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">coarse-sand(0.2-2.0mm)</td>
+      <td style="text-align: left">coarse-sand</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
@@ -394,6 +508,19 @@
 <h2 id="scientific-reports">Scientific reports</h2>
 
 <h2 id="data-access">Data access</h2>
+
+<p>The data is provided under the following licenses:</p>
+
+<ul>
+  <li>Data License: Creative Commons Attribution license (<strong>CC-BY</strong>)</li>
+  <li>Code License: Massachusetts Institute of Technology License ()<strong>MIT License</strong>)</li>
+</ul>
+
+<h2 id="acknowledgments-and-funding">Acknowledgments and Funding</h2>
+
+<p>This work is part of the AI4SoilHealth project, funded by the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101086179.</p>
+
+<p><em>Funded by the European Union. The views expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Executive Agency.</em></p>
 
 <h2 id="resources">Resources</h2>
 
