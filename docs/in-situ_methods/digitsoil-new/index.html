@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="In-situ data">
 <meta property="og:title" content="Enzymatic activity">
-<meta property="og:url" content="https://ai4sh.github.io/in-situ_data_docs/docs/in-situ_methods/digitsoil/">
+<meta property="og:url" content="https://ai4sh.github.io/in-situ_data_docs/docs/in-situ_methods/digitsoil-new/">
 
 
   <meta property="og:description" content="Soil enzymatic activity reveals the dominating soil biological processes.">
@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2025-12-05T05:13:03+01:00">
+  <meta property="article:modified_time" content="2025-11-27T05:13:03+01:00">
 
 
 
@@ -48,7 +48,7 @@
   
 
 
-<link rel="canonical" href="https://ai4sh.github.io/in-situ_data_docs/docs/in-situ_methods/digitsoil/">
+<link rel="canonical" href="https://ai4sh.github.io/in-situ_data_docs/docs/in-situ_methods/digitsoil-new/">
 
 
 
@@ -199,7 +199,7 @@
             
               <li><a href="/in-situ_data_docs/docs/in-situ_methods/edna/">eDNA</a></li>
             
-              <li><a href="/in-situ_data_docs/docs/in-situ_methods/digitsoil/" class="active">Enzymatic activity</a></li>
+              <li><a href="/in-situ_data_docs/docs/in-situ_methods/digitsoil/">Enzymatic activity</a></li>
             
               <li><a href="/in-situ_data_docs/docs/in-situ_methods/infiltration/">Infiltration</a></li>
             
@@ -233,13 +233,13 @@
     <meta itemprop="headline" content="Enzymatic activity">
     <meta itemprop="description" content="Soil enzymatic activity reveals the dominating soil biological processes.">
     <meta itemprop="datePublished" content="2025-11-27T05:13:03+01:00">
-    <meta itemprop="dateModified" content="2025-12-05T05:13:03+01:00">
+    <meta itemprop="dateModified" content="2025-11-27T05:13:03+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://ai4sh.github.io/in-situ_data_docs/docs/in-situ_methods/digitsoil/" itemprop="url">Enzymatic activity
+            <a href="https://ai4sh.github.io/in-situ_data_docs/docs/in-situ_methods/digitsoil-new/" itemprop="url">Enzymatic activity
 </a>
           </h1>
           
@@ -252,11 +252,13 @@
         
         <p>All biological processes and functions are governed by enzymes and their activities. Assessing the activity rates of soil extracellular enzymes has traditionally been an expensive analysis restricted to the laboratory and specialist personnel.</p>
 
-<p>The Swiss start-up Digit Soil, a partner of the AI4SH (AI4SoilHealth) project, has developed a rapid method for quantifying five key soil enzymatic activities. The Soil Enzymatic Activity Reader (SEAR) and reaction plates developed by Digit Soil form a stand-alone system that can be used in an ordinary home or office (laboratory-independent) and is applicable for use by, for instance, citizen scientists. This move makes the complex measurement of soil functional diversity and activity simple and inexpensive.</p>
+<p>The Swiss start-up <a href="https://www.digit-soil.com">Digit Soil</a>, a partner of the AI4SH (AI4SoilHealth) project, has developed a rapid method for quantifying five key soil enzymatic activities. The Soil Enzymatic Activity Reader (SEAR) and reaction plates developed by Digit Soil form a stand-alone system that can be used in an ordinary home or office (laboratory-independent) and is applicable for use by, for instance, citizen scientists. This move makes the complex measurement of soil functional diversity and activity simple and inexpensive.</p>
 
 <h2 id="short-method-description">Short method description</h2>
 
-<p>The Soil Enzymatic Activity Reader (SEAR), developed by Digit Soil, uses a combination of reaction plates and fluorescence spectroscopy <a href="https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2025.1663635/full">Fetzer et al., 2025</a>. The method requires fresh samples, which must be either analyzed directly from the field or stored and transported at a low temperature (a few degrees Celsius) for no more than a few days before analysis.Reaction plates, designed with 5 x 5 wells (which include three replicates for each enzyme plus internal calibration wells), are pressed onto the soil contained in a soil tray. The tray is then inserted into a spectrometer that uses targeted UV light to excite the reactants in the reaction plate. A digital camera registers the resulting signal, which is later computed to determine the enzymatic activity rate over a 40-minute period. The enzymatic activity rates of five key enzymes are then reported. The enzymatic activities measured are summarised in table 1.</p>
+<p>The Soil Enzymatic Activity Reader (SEAR), developed by Digit Soil, uses a combination of reaction plates and fluorescence spectroscopy. The method requires fresh samples, which must be either analyzed directly from the field or stored and transported at a low temperature (a few degrees Celsius) for no more than a few days before analysis.</p>
+
+<p>Reaction plates, designed with 5 x 5 wells (which include three replicates for each enzyme plus internal calibration wells), are pressed onto the soil contained in a soil tray. The tray is then inserted into a spectrometer that uses UV light to excite the reactants in the reaction plate. A digital camera registers the resulting signal, which is later computed to determine the enzymatic activity rate over a 40-minute period. The enzymatic activity rates of five key enzymes are then reported. The enzymatic activities measured are summarised in table 1</p>
 
 <p>Table 1. Enzymatic activities recorded with each observation with the Soil Enzymatic Activity Reader (SEAR).</p>
 
@@ -309,7 +311,7 @@
 
 <h3 id="flat-json-object">Flat json object</h3>
 
-<p>Below is an example of a flat json object for enzymatic observations. Object keys with a double underscore denote a link to other entries in the database. For example “person__email” is a key for the person responsible, with more detailed contact information in a separate json document. The hashtag comments are not allowed when operating a json file, they are added here for explaining each json object.</p>
+<p>Below is an example of a flat json object for enzymatic observations. Object keys with a double underscore denote a link to other entries in the database. For example <em>“person__email”</em> is a key for the person responsible, with more detailed contact information in a separate json document. The hashtag comments are not allowed when operating a json file, they are added here for explaining each json object.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "data_source": "ai4sh_se-loennstorp", # 'project'+'_'+'country'+'-'+'pilot site'
@@ -577,10 +579,6 @@
 
 <p><em>Funded by the European Union. The views expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Executive Agency.</em></p>
 
-<h2 id="references">References</h2>
-
-<p>Fetzer, J., Meller, S., Iven, H., Baur, D., García Rivera, P., Meller, A. &amp; Luster, J. (2025) ‘Novel, laboratory-independent device to measure extracellular enzymatic activity in soils’, Frontiers in Environmental Science, 13, p. 1663635. doi: 10.3389/fenvs.2025.1663635</p>
-
 
         
       </section>
@@ -592,7 +590,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-12-05">December 5, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-11-27">November 27, 2025</time></p>
 
       </footer>
 
@@ -601,10 +599,10 @@
       
   <nav class="pagination">
     
-      <a href="/in-situ_data_docs/docs/in-situ_methods/bulkdensity/" class="pagination--pager" title="Bulk density and volumetric soil moisture content">Previous</a>
+      <a href="/in-situ_data_docs/docs/in-situ_methods/digitsoil/" class="pagination--pager" title="Enzymatic activity">Previous</a>
     
     
-      <a href="/in-situ_data_docs/docs/in-situ_methods/digitsoil-new/" class="pagination--pager" title="Enzymatic activity">Next</a>
+      <a href="/in-situ_data_docs/docs/in-situ_methods/edna/" class="pagination--pager" title="eDNA">Next</a>
     
   </nav>
 
