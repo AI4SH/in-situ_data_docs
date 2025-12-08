@@ -118,15 +118,15 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a
                 href="https://ai4soilhealth.eu"
-                 title="AI4SoilHealth main site"
+                 title="AI4SoilHealth official web site"
                 
               >AI4SH home</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/in-situ_data_docs/docs/"
-                 title="AI4SH in-situ data main page"
+                href="https://github.com/AI4SH/in-situ_data_management"
+                 title="Jupyter notebook for managing AI4SH in-situ data"
                 
-              >In-situ data home</a>
+              >Manage in-situ data</a>
             </li><li class="masthead__menu-item">
               <a
                 href="https://github.com/AI4SoilHealth"
@@ -136,7 +136,7 @@
             </li><li class="masthead__menu-item">
               <a
                 href="https://github.com/AI4SH/EO-data_access"
-                 title="Accessing AI4SH Earth Observation (satellite) data for in-situ data points"
+                 title="Jupyter notebook for accessing AI4SH Earth Observation (satellite) data for in-situ data points"
                 
               >EO data access</a>
             </li></ul>
@@ -240,11 +240,17 @@
 
 <p>The satellite data is freely available under the GitHub account <a href="https://github.com/AI4Soilhealth">AI4Soilhealth</a>, including a set of Jupyter Notebooks for the <a href="https://github.com/AI4SoilHealth/SoilHealthDataCube">Soil Health DataCube</a> and <a href="https://github.com/AI4SoilHealth/EcoDataCube">Front-end scripts for access using Geoserver and Openlayers</a>. Satellite derived static landscape and landform indexes exracted with the Notebook is included in the in-situ data presented here. It is available under the link <a href="../docs/in-situ_methods/eo-data/"><em>EO-data</em></a> in the left panel.</p>
 
-<p>The in-situ data is freely available under the GitHub account <a href="https://github.com/AI4SH">AI4SH</a>. In total 13 different methods were tested for in-situ data sampling and analysis. Links to documentation and data for the different methods are available in the left panel and under the short description of each method on this page.</p>
+<p>The in-situ data is freely available under the GitHub account <a href="https://github.com/AI4SH">AI4SH</a>. Approxiamtely a dozen different methods were tested for in-situ data sampling and analysis. Links to documentation and data for the different methods are available in the left panel and under the short description of each method on this page.</p>
 
 <p>To combine the satellite data and the the in-situ data, you can use the Jupyter Notebook <a href="https://github.com/AI4SH/EO-data_access">Extract_AI4SH_point_datacube</a>. It that can be used for downloading environmental values from the Soil Health Data Cube for the in-situ data points (and any points you define).</p>
 
 <p>The catalogue of documents you are reading now is for the in-situ data. To get information on the satellite data please visit the sister site <a href="https://github.com/AI4Soilhealth">AI4SoilHealth</a>.</p>
+
+<h2 id="ai4sh-in-situ-data-structure-and-organisation">AI4SH in-situ data structure and organisation</h2>
+
+<p>The AI4SH in-situ data is analysed with a large range of methods and instruments. The datasets from each method/instrument are all different. To structure the datasets the data are first recorded to a spreadsheet format. The spreadsheet is then transformed into a json formatted database. The online data available is in the json transformed database format, with each observation having a complete definition of metadata. The transformation from spreadsheet data to the predefined json formatted database is freely available as a Jupyter Notebook, <a href="https://github.com/AI4SH/in-situ_data_management">In-site_data-management</a>.</p>
+
+<p>The notebook can transform any data defined by a header column with definitions, with each row below defining an observation. It has functions to directly transform spectral data from the spectrometers applied in the project. EO data retrieved for sample points, using the notebook <a href="https://github.com/AI4SH/EO-data_access">Extract_AI4SH_point_datacube</a>, are transformed from the csv file produced.</p>
 
 <h2 id="ai4sh-in-situ-data-access">AI4SH in-situ data access</h2>
 
