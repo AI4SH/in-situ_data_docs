@@ -256,7 +256,11 @@
 
 <h2 id="short-method-description">Short method description</h2>
 
-<p>TO BE filled in</p>
+<p>The Soil Health Data Cube for pan-EU SHDC4EU is a compilation of pan-European spatial layers organized into a data cube and served through an API as analysis-ready and decision-ready data. <a href="ogh">OpenGeoHub</a>, an independent not-for-profit research foundation and a partner of the AI4SH project, has developed this analysis-ready open environmental data cube for Europe.</p>
+
+<p>It includes EU-wide Earth Observation (EO) products, terrain parameters, primary soil properties, land degradation indices, etc., at 30-m resolution covering the period 2000–2024+. It also provides climatic time-series datasets (such as rainfall, soil moisture, and surface temperature) and projected crop model outputs (typically at 1-km spatial resolution).</p>
+
+<p>All soil health indicators collected at different pilot sites with their coordinates, can be combined with these SHDC layers to enable terrain and remote sensing analysis for furthur processes. Table 1 is an excerpt of available data layers. Single data points from these layers can be extracted with the AI4SH Jupyter notebook <a href="https://github.com/AI4SH/EO-data_access">Extract_AI4SH_point_datacube</a>. To combine the extracted data with the in-situ data is then done with the notebook <a href="https://github.com/AI4SH/in-situ_data_management">AI4SH_csv_to_AI4SH_json</a>.</p>
 
 <p>Table 1. Static soil properties retrieved from the Soil Health Data Cube.</p>
 
@@ -271,75 +275,81 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">dfme-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/dfme_edtm/collection.json?.language=en">OpenLandMap Difference from mean elevation (GEDTM30)</a></td>
       <td style="text-align: left">dfme-edtm</td>
       <td style="text-align: left">eo-data_dfme-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">hillshae</td>
-      <td style="text-align: left">hillshade</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/geomorphon_edtm/collection.json?.language=en">OpenLandMap Geomorphons (GEDTM30)</a></td>
+      <td style="text-align: left">geomorphons-edtm</td>
+      <td style="text-align: left">eo-data_dfme-geomorphons</td>
+      <td style="text-align: left">index</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/hillshade_edtm/collection.json?.language=en">OpenLandMap Hillshade (GEDTM30)</a></td>
+      <td style="text-align: left">hillshade-edtm</td>
       <td style="text-align: left">eo-data_hillshade-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">LS factor?</td>
-      <td style="text-align: left">Soil erorosion LS factor?</td>
-      <td style="text-align: left">eo-data_ls.factor-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/ls.factor_edtm/collection.json?.language=en">OpenLandMap LS factor (GEDTM30)</a></td>
+      <td style="text-align: left">ls.factor-edtm_20060101-20151231</td>
+      <td style="text-align: left">eo-data_ls.factor-edtm20060101-20151231</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">maxic-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/maxic_edtm/collection.json?.language=en">OpenLandMap Maximal curvature (GEDTM30</a></td>
       <td style="text-align: left">maxic-edtm</td>
       <td style="text-align: left">eo-data_maxic-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">minic-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/minic_edtm/collection.json?.language=en">OpenLandMap Minimal curvature (GEDTM30)</a></td>
       <td style="text-align: left">minic-edtm</td>
       <td style="text-align: left">eo-data_minic-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">neg.openness-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/neg.openness_edtm/collection.json?.language=en">OpenLandMap Negative openness (GEDTM30)</a></td>
       <td style="text-align: left">neg.openness-edtm</td>
       <td style="text-align: left">eo-data_neg.openness-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">pos.openness-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/pos.openness_edtm/collection.json?.language=en">OpenLandMap Positive openness (GEDTM30)</a></td>
       <td style="text-align: left">pos.openness-edtm</td>
       <td style="text-align: left">eo-data_pos.openness-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">pro.curv-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/pro.curv_edtm/collection.json?.language=en">OpenLandMap Profile curvature (GEDTM30)</a></td>
       <td style="text-align: left">pro.curv-edtm</td>
       <td style="text-align: left">eo-data_pro.curv-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">shpindx-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/shpindx_edtm/collection.json?.language=en">OpenLandMap Shape index (GEDTM30)</a></td>
       <td style="text-align: left">shpindx-edtm</td>
       <td style="text-align: left">eo-data_shpindx-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
-      <td style="text-align: left">slope.in.degree-edtm</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/slope.in.degree_edtm/collection.json?.language=en">OpenLandMap Slope in degree (GEDTM30)</a></td>
       <td style="text-align: left">slope.in.degree-edtm</td>
       <td style="text-align: left">eo-data_slope.in.degree-edtm</td>
       <td style="text-align: left">degrees</td>
     </tr>
     <tr>
-      <td style="text-align: left">topographci wetness index?</td>
-      <td style="text-align: left">topographci wetness index?</td>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/twi_edtm/collection.json?.language=en">OpenLandMap Topographic Wetness Index (GEDTM30)</a></td>
+      <td style="text-align: left">topographic wetness index</td>
       <td style="text-align: left">eo-data_twi-edtm</td>
       <td style="text-align: left">index</td>
     </tr>
     <tr>
+      <td style="text-align: left"><a href="https://stac.ecodatacube.eu/crop.type_eucropmap/collection.json?.language=en">EUCROPMAP Pan-EU year 2022</a></td>
       <td style="text-align: left">crop.type-eucropmap.v1</td>
-      <td style="text-align: left">crop.type-eucropmap.v1</td>
-      <td style="text-align: left">eo-data_crop.type-eucropmap.v1</td>
+      <td style="text-align: left">eo-data_crop.type-eucropmap.v1_2022</td>
       <td style="text-align: left">index</td>
     </tr>
   </tbody>
